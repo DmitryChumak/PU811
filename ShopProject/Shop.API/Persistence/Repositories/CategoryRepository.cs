@@ -17,5 +17,10 @@ namespace Shop.API.Persistence.Repositories
         {
             return await context.Categories.ToListAsync();
         }
+
+        public async Task AddAsync(Category category)
+        {
+            await context.Categories.AddAsync(category);
+        }
     }
 }

@@ -4,6 +4,7 @@ using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Shop.API.Domain.Models;
 using Shop.API.Domain.Services;
+using Shop.API.Extensions;
 using Shop.API.Resources;
 
 namespace Shop.API.Controllers
@@ -25,6 +26,22 @@ namespace Shop.API.Controllers
             var categories = await categoryService.ListAsync();
             var resources = mapper.Map<IEnumerable<Category>, IEnumerable<CategoryResource>>(categories);
             return resources;
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> PostAsync([FromBody]SaveCategoryResource resource)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState.GetErrorMessages());
+            
+            var category = mapper.Map<SaveCategoryResource, Category>(resource);
+            var result = await categoryService.SaveAsync(category);
+
+            if (!result.Success)
+                return BadRequest(result.Message);
+            
+            var categoryResource = mapper.Map<Category, CategoryResource>(result.Category);
+            return Ok(categoryResource);
         }
     }
 }

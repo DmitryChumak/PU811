@@ -22,5 +22,20 @@ namespace Shop.API.Persistence.Repositories
         {
             await context.Categories.AddAsync(category);
         }
+
+        public async Task<Category> FindByIdAsync(int id)
+        {
+            return await context.Categories.FindAsync(id);
+        }
+
+        public void Update(Category category)
+        {
+            context.Categories.Update(category);
+        }
+
+        public void Remove(Category category)
+        {
+            context.Categories.Remove(category);
+        }
     }
 }

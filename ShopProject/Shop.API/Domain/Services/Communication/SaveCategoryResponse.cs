@@ -1,7 +1,7 @@
 using Shop.API.Domain.Models;
 using Shop.API.Domain.Services.Communication;
 
-namespace Shop.API.Controllers
+namespace Shop.API.Domain.Services.Communication
 {
     public class SaveCategoryResponse : BaseResponse
     {

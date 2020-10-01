@@ -1,6 +1,16 @@
-POST https://localhost:5001/api/categories
-Content-Type: application/json
+# POST https://localhost:5001/api/categories
+# Content-Type: application/json
 
-{
-    "Name": "Cars"
-}
+# {
+#     "Name": "Cars"
+# }
+
+
+# PUT https://localhost:5001/api/categories/200
+# Content-Type: application/json
+
+# {
+#     "Name": "NOTEBOOKS"
+# }
+
+DELETE https://localhost:5001/api/categories/100

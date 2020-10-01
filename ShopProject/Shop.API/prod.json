@@ -1,0 +1,272 @@
+[
+    {
+        "productId": 1001,
+        "productName": "Dell ChromeBook Laptop NoteBook PC",
+        "productCount": 1,
+        "category": {
+            "categoryId": 1000,
+            "categoryName": "Notebook"
+        }
+    },
+    {
+        "productId": 1002,
+        "productName": "Acer Aspire 5 Slim Laptop",
+        "productCount": 13,
+        "category": {
+            "categoryId": 1000,
+            "categoryName": "Notebook"
+        }
+    },
+    {
+        "productId": 1003,
+        "productName": "HP 14in High Performance Laptop",
+        "productCount": 12,
+        "category": {
+            "categoryId": 1000,
+            "categoryName": "Notebook"
+        }
+    },
+    {
+        "productId": 1004,
+        "productName": "ASUS VivoBook 15 Thin and Light Laptop",
+        "productCount": 10,
+        "category": {
+            "categoryId": 1000,
+            "categoryName": "Notebook"
+        }
+    },
+    {
+        "productId": 1005,
+        "productName": "Lenovo 100E Chromebook 2ND Gen Laptop",
+        "productCount": 10,
+        "category": {
+            "categoryId": 1000,
+            "categoryName": "Notebook"
+        }
+    },
+    {
+        "productId": 1006,
+        "productName": "Xiaomi Redmi Note 8",
+        "productCount": 5,
+        "category": {
+            "categoryId": 1001,
+            "categoryName": "Smartphone"
+        }
+    },
+    {
+        "productId": 1007,
+        "productName": "Samsung Galaxy A10",
+        "productCount": 44,
+        "category": {
+            "categoryId": 1001,
+            "categoryName": "Smartphone"
+        }
+    },
+    {
+        "productId": 1008,
+        "productName": "Brother Monochrome Black/White Laser Printer",
+        "productCount": 2,
+        "category": {
+            "categoryId": 1002,
+            "categoryName": "Printer"
+        }
+    },
+    {
+        "productId": 1009,
+        "productName": "HP LaserJet Pro M15w Wireless Laser Printer",
+        "productCount": 8,
+        "category": {
+            "categoryId": 1002,
+            "categoryName": "Printer"
+        }
+    },
+    {
+        "productId": 1010,
+        "productName": "TCL 32S325 32 Inch 720p Roku Smart LED TV",
+        "productCount": 3,
+        "category": {
+            "categoryId": 1003,
+            "categoryName": "TV"
+        }
+    },
+    {
+        "productId": 1011,
+        "productName": "VIZIO D-Series 24 Class Smart TV",
+        "productCount": 10,
+        "category": {
+            "categoryId": 1003,
+            "categoryName": "TV"
+        }
+    },
+    {
+        "productId": 1012,
+        "productName": "Westinghouse 50 4K Ultra HD Smart Roku TV",
+        "productCount": 10,
+        "category": {
+            "categoryId": 1003,
+            "categoryName": "TV"
+        }
+    },
+    {
+        "productId": 1013,
+        "productName": "LG OLED55B9PUA B9 Series 55 4K Ultra HD Smart OLED TV",
+        "productCount": 11,
+        "category": {
+            "categoryId": 1003,
+            "categoryName": "TV"
+        }
+    },
+    {
+        "productId": 1014,
+        "productName": "Samsung Electronics UN32J4001 32-Inch 720p LED TV",
+        "productCount": 11,
+        "category": {
+            "categoryId": 1003,
+            "categoryName": "TV"
+        }
+    },
+    {
+        "productId": 1015,
+        "productName": "VIZIO SmartCast D-Series 32-inch Class Smart Full-Array LED TV",
+        "productCount": 12,
+        "category": {
+            "categoryId": 1003,
+            "categoryName": "TV"
+        }
+    },
+    {
+        "productId": 1016,
+        "productName": "LG Electronics 22LJ4540 22-Inch 1080p IPS LED TV",
+        "productCount": 50,
+        "category": {
+            "categoryId": 1003,
+            "categoryName": "TV"
+        }
+    },
+    {
+        "productId": 1017,
+        "productName": "Hisense 32H5500F 32-Inch Android Smart TV",
+        "productCount": 54,
+        "category": {
+            "categoryId": 1003,
+            "categoryName": "TV"
+        }
+    },
+    {
+        "productId": 1018,
+        "productName": "LG Electronics 24LH4830-PU 24-Inch Smart LED TV",
+        "productCount": 78,
+        "category": {
+            "categoryId": 1003,
+            "categoryName": "TV"
+        }
+    },
+    {
+        "productId": 1019,
+        "productName": "Samsung Electronics UN32M4500BFXZA 720P Smart LED TV",
+        "productCount": 90,
+        "category": {
+            "categoryId": 1003,
+            "categoryName": "TV"
+        }
+    },
+    {
+        "productId": 1020,
+        "productName": "Sony MDRZX110/BLK ZX Series Stereo Headphones",
+        "productCount": 14,
+        "category": {
+            "categoryId": 1004,
+            "categoryName": "Headphones"
+        }
+    },
+    {
+        "productId": 1021,
+        "productName": "Bose QuietComfort 35 II Wireless Bluetooth Headphones",
+        "productCount": 90,
+        "category": {
+            "categoryId": 1004,
+            "categoryName": "Headphones"
+        }
+    },
+    {
+        "productId": 1022,
+        "productName": "Samsung Galaxy Tab A 8.0 Wifi Android 9.0 Pie Tablet Black",
+        "productCount": 20,
+        "category": {
+            "categoryId": 1005,
+            "categoryName": "Tablet"
+        }
+    },
+    {
+        "productId": 1023,
+        "productName": "Premium High Performance RCA Voyager Pro Touchscreen Tablet",
+        "productCount": 20,
+        "category": {
+            "categoryId": 1005,
+            "categoryName": "Tablet"
+        }
+    },
+    {
+        "productId": 1024,
+        "productName": "Lenovo Tab M10 HD Android Tablet",
+        "productCount": 95,
+        "category": {
+            "categoryId": 1005,
+            "categoryName": "Tablet"
+        }
+    },
+    {
+        "productId": 1025,
+        "productName": "Canon PowerShot SX420 Digital Camera",
+        "productCount": 10,
+        "category": {
+            "categoryId": 1006,
+            "categoryName": "Camera"
+        }
+    },
+    {
+        "productId": 1026,
+        "productName": "Kodak PIXPRO Friendly Zoom FZ53-BK 16MP Digital Camera",
+        "productCount": 9,
+        "category": {
+            "categoryId": 1006,
+            "categoryName": "Camera"
+        }
+    },
+    {
+        "productId": 1027,
+        "productName": "Canon PowerShot ELPH 180 Digital Camera",
+        "productCount": 40,
+        "category": {
+            "categoryId": 1006,
+            "categoryName": "Camera"
+        }
+    },
+    {
+        "productId": 1028,
+        "productName": "Canon PowerShot SX620 Digital Camera ",
+        "productCount": 14,
+        "category": {
+            "categoryId": 1006,
+            "categoryName": "Camera"
+        }
+    },
+    {
+        "productId": 1029,
+        "productName": "Polaroid Originals OneStep 2 VF Instant Film Camera",
+        "productCount": 15,
+        "category": {
+            "categoryId": 1006,
+            "categoryName": "Camera"
+        }
+    },
+    {
+        "productId": 1030,
+        "productName": "Kobo Clara HD Carta E Ink Touchscreen E-Reader",
+        "productCount": 10,
+        "category": {
+            "categoryId": 1007,
+            "categoryName": "EBook Reader"
+        }
+    }
+]

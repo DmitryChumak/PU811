@@ -1,11 +1,9 @@
-namespace Shop.API.Domain.Models
+namespace Shop.API.Resources
 {
-    public class Product
+    public class SaveProductResource
     {
-        public int ProductId {get;set;}
         public string ProductName {get;set;}
         public int ProductCount {get;set;}
         public int CategoryId {get;set;}
-        public Product Category {get;set;}
     }
 }

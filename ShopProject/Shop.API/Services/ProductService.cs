@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Shop.API.Domain.Models;
@@ -18,9 +19,24 @@ namespace Shop.API.Services
             this.productRepository = productRepository;
             this.unitOfWork = unitOfWork;
         }
-        public Task<SaveProductResponse> DeleteAsync(int id)
+        public async Task<SaveProductResponse> DeleteAsync(int id)
         {
-            throw new System.NotImplementedException();
+            var existingProduct = await productRepository.FindByIdAsync(id);
+
+            if (existingProduct == null)
+                return new SaveProductResponse("Product not found");
+
+            try 
+            {
+                productRepository.Remove(existingProduct);
+                await unitOfWork.CompleteAsync();
+
+                return new SaveProductResponse(existingProduct);
+            }
+            catch (Exception ex)
+            {
+                return new SaveProductResponse($"Error when deleting product: {ex.Message}");
+            }
         }
 
         public async Task<IEnumerable<Product>> ListAsync()
@@ -28,14 +44,43 @@ namespace Shop.API.Services
             return await productRepository.ListAsync();
         }
 
-        public Task<SaveProductResponse> SaveAsync(Product category)
+        public async Task<SaveProductResponse> SaveAsync(Product product)
         {
-            throw new System.NotImplementedException();
+            try 
+            {
+                await productRepository.AddAsync(product);
+                await unitOfWork.CompleteAsync();
+
+                return new SaveProductResponse(product);
+            }
+            catch (Exception ex)
+            {
+                return new SaveProductResponse($"Save product error: {ex.Message}");
+            }
         }
 
-        public Task<SaveProductResponse> UpdateAsync(int id, Product category)
+        public async Task<SaveProductResponse> UpdateAsync(int id, Product product)
         {
-            throw new System.NotImplementedException();
+            var existingProduct = await productRepository.FindByIdAsync(id);
+
+            if (existingProduct == null)
+                return new SaveProductResponse("Product not found");
+            
+            existingProduct.CategoryId = product.CategoryId;
+            existingProduct.ProductCount = product.ProductCount;
+            existingProduct.ProductName = product.ProductName;
+
+            try
+            {
+                productRepository.Update(existingProduct);
+                await unitOfWork.CompleteAsync();
+
+                return new SaveProductResponse(existingProduct);
+            }
+            catch (Exception ex)
+            {
+                return new SaveProductResponse($"Error when updating product: {ex.Message}");
+            }
         }
     }
 }

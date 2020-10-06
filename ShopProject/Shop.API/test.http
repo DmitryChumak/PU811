@@ -13,4 +13,29 @@
 #     "Name": "NOTEBOOKS"
 # }
 
-DELETE https://localhost:5001/api/categories/100
+# DELETE https://localhost:5001/api/categories/100
+
+
+# POST https://localhost:5001/api/products
+# Content-Type: application/json
+
+# {
+#     "ProductName": "test",
+#     "ProductCount": 111,
+#     "CategoryId": 1000
+# }
+
+
+GET https://localhost:5001/api/products
+
+
+# DELETE  https://localhost:5001/api/products/1001
+
+# PUT https://localhost:5001/api/products/1002
+# Content-Type: application/json
+
+# {
+#     "productName": "LG",
+#     "productCount": 1,
+#     "categoryId": 1003
+# }

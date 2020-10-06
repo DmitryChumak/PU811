@@ -10,6 +10,8 @@ namespace Shop.API.Mapping
         {
             CreateMap<SaveCategoryResource, Category>()
                     .ForMember(x => x.CategoryName, y => y.MapFrom(x => x.Name));
+
+            CreateMap<SaveProductResource, Product>();
                                    
         }
     }

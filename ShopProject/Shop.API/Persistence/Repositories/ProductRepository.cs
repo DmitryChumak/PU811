@@ -13,14 +13,14 @@ namespace Shop.API.Persistence.Repositories
         {
         }
 
-        public Task AddAsync(Product category)
+        public async Task AddAsync(Product product)
         {
-            throw new System.NotImplementedException();
+            await context.AddAsync(product);
         }
 
-        public Task<Product> FindByIdAsync(int id)
+        public async Task<Product> FindByIdAsync(int id)
         {
-            throw new System.NotImplementedException();
+             return await context.Products.FindAsync(id);
         }
 
         public async Task<IEnumerable<Product>> ListAsync()
@@ -28,14 +28,14 @@ namespace Shop.API.Persistence.Repositories
             return await context.Products.Include(x => x.Category).ToListAsync();
         }
 
-        public void Remove(Product category)
+        public void Remove(Product product)
         {
-            throw new System.NotImplementedException();
+            context.Products.Remove(product);
         }
 
-        public void Update(Product category)
+        public void Update(Product product)
         {
-            throw new System.NotImplementedException();
+            context.Products.Update(product);
         }
     }
 }

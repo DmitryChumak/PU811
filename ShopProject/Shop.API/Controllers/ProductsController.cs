@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Shop.API.Domain.Models;
 using Shop.API.Domain.Services;
@@ -11,6 +12,7 @@ namespace Shop.API.Controllers
 {
 
     [Route("api/[controller]")]
+    [Authorize]
     public class ProductsController : Controller
     {
         private readonly IProductService productService;

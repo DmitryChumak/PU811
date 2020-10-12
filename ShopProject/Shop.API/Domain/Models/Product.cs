@@ -6,6 +6,6 @@ namespace Shop.API.Domain.Models
         public string ProductName {get;set;}
         public int ProductCount {get;set;}
         public int CategoryId {get;set;}
-        public Product Category {get;set;}
+        public Category Category {get;set;}
     }
 }

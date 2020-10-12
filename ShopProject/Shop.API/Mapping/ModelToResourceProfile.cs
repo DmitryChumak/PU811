@@ -9,7 +9,8 @@ namespace Shop.API.Mapping
         public ModelToResourceProfile()
         {
             CreateMap<Product, ProductResource>();
-            CreateMap<Product, ProductResource>();
+            CreateMap<Category, CategoryResource>();
+            CreateMap<User, UserResource>();
         }
     }
 }

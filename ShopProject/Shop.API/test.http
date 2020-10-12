@@ -26,7 +26,7 @@
 # }
 
 
-GET https://localhost:5001/api/products
+# GET https://localhost:5001/api/products
 
 
 # DELETE  https://localhost:5001/api/products/1001
@@ -39,3 +39,19 @@ GET https://localhost:5001/api/products
 #     "productCount": 1,
 #     "categoryId": 1003
 # }
+
+
+
+
+
+
+# POST https://localhost:5001/api/auth
+# Content-Type: application/json
+
+# {
+#     "login":"admin",
+#     "password":"admin"
+# }
+
+
+GET https://localhost:5001/api/products

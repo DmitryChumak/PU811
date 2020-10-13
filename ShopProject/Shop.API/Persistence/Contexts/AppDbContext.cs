@@ -1,12 +1,15 @@
 using Microsoft.EntityFrameworkCore;
 using Shop.API.Domain.Models;
 
-namespace Shop.API.Domain.Persistence.Contexts
+namespace Shop.API.Persistence.Contexts
 {
     public class AppDbContext : DbContext
     {
         public DbSet<Category> Categories {get;set;}
         public DbSet<Product> Products {get;set;}
+        public DbSet<User> Users {get;set;}
+        public DbSet<Role> Roles {get;set;}
+        public DbSet<UserRole> UserRoles {get;set;}
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
         }
@@ -15,7 +18,58 @@ namespace Shop.API.Domain.Persistence.Contexts
         {
             base.OnModelCreating(builder);
 
-          
+
+            builder.Entity<User>().ToTable("Users");
+            builder.Entity<User>().HasKey(x => x.Id);
+            builder.Entity<User>().Property(x => x.Id).ValueGeneratedOnAdd();
+            builder.Entity<User>().Property(x => x.Name).IsRequired().HasMaxLength(30);
+            builder.Entity<User>().Property(x => x.Lastname).IsRequired().HasMaxLength(30);
+            builder.Entity<User>().Property(x => x.Login).IsRequired().HasMaxLength(30);
+            builder.Entity<User>().Property(x => x.Password).IsRequired();
+            builder.Entity<User>().HasAlternateKey(x => x.Login);
+            builder.Entity<User>().HasMany(x => x.UserRoles).WithOne(x => x.User);
+
+            builder.Entity<Role>().ToTable("Roles");
+            builder.Entity<Role>().Property(x => x.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Role>().Property(x => x.Name).IsRequired();
+            builder.Entity<Role>().HasAlternateKey(x => x.Name);
+            builder.Entity<Role>().HasMany(x => x.UserRoles).WithOne(x => x.Role);
+
+            builder.Entity<UserRole>().ToTable("UserRoles");
+            builder.Entity<UserRole>().HasKey(ur => new { ur.UserId, ur.RoleId});
+
+
+            Role sa = new Role {Id = 1000, Name = "SuperAdmin"};
+            Role admin = new Role {Id = 2000, Name = "Admin"};
+            Role user = new Role {Id = 3000, Name = "User"};
+
+            User u1 = new User
+            {
+                Id = 777,
+                Name = "Serg",
+                Lastname = "Yarosh",
+                Login = "yaroshthebest",
+                Password = "ilovecsharp"
+            };
+            User u2 = new User
+            {
+                Id = 771,
+                Name = "V",
+                Lastname = "S",
+                Login = "Vitaliabetterthanserg",
+                Password = "sergdno"
+            };
+
+            UserRole ur1 = new UserRole {UserId = 777, RoleId = 1000};
+            UserRole ur2 = new UserRole {UserId = 777, RoleId = 2000};
+            UserRole ur3 = new UserRole {UserId = 771, RoleId = 3000};
+
+            builder.Entity<Role>().HasData(sa, admin, user);
+            builder.Entity<User>().HasData(u1,u2);
+            builder.Entity<UserRole>().HasData(ur1,ur2,ur3);
+
+
+
             builder.Entity<Category>().ToTable("Categories");
             builder.Entity<Category>().HasKey(x => x.CategoryId);
             builder.Entity<Category>()

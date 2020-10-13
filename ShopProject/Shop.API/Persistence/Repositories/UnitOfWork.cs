@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
-using Shop.API.Domain.Persistence.Contexts;
 using Shop.API.Domain.Repositories;
+using Shop.API.Persistence.Contexts;
 
 namespace Shop.API.Persistence.Repositories
 {

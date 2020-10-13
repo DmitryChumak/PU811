@@ -6,9 +6,9 @@ namespace Shop.API.Domain.Repositories
     public interface IRepository<T> where T: class, new()
     {
          Task<IEnumerable<T>> ListAsync();
-         Task AddAsync(T category);
+         Task AddAsync(T entity);
          Task<T> FindByIdAsync(int id);
-         void Update(T category);
-         void Remove(T category);
+         void Update(T entity);
+         void Remove(T entity);
     }
 }

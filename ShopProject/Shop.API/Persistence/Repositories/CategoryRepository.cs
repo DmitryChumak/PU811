@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Shop.API.Domain.Models;
-using Shop.API.Domain.Persistence.Contexts;
+using Shop.API.Persistence.Contexts;
 using Shop.API.Domain.Repositories;
 
 namespace Shop.API.Persistence.Repositories

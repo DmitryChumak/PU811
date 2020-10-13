@@ -15,10 +15,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using Shop.API.Domain.Persistence.Contexts;
 using Shop.API.Domain.Repositories;
 using Shop.API.Domain.Services;
 using Shop.API.Helpers;
+using Shop.API.Persistence.Contexts;
 using Shop.API.Persistence.Repositories;
 using Shop.API.Services;
 
@@ -69,6 +69,11 @@ namespace Shop.API
             });
 
 
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IRoleService, RoleService>();
+            services.AddScoped<IRoleRepository, RoleRepository>();
+            services.AddScoped<IUserRoleService, UserRoleService>();
 
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IProductService, ProductService>();

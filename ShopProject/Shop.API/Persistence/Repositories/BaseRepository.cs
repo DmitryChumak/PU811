@@ -1,4 +1,4 @@
-using Shop.API.Domain.Persistence.Contexts;
+using Shop.API.Persistence.Contexts;
 
 namespace Shop.API.Persistence.Repositories
 {

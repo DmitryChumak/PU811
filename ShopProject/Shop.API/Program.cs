@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Shop.API.Domain.Persistence.Contexts;
+using Shop.API.Persistence.Contexts;
 
 namespace Shop.API
 {

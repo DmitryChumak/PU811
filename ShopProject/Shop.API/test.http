@@ -54,4 +54,11 @@
 # }
 
 
-GET https://localhost:5001/api/products
+# DELETE  https://localhost:5001/api/userroles/deleterole/777
+# Content-Type: application/json
+
+# {
+#     "RoleId": 3000
+# }
+
+GET https://localhost:5001/api/users

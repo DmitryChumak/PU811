@@ -1,3 +1,4 @@
+using System.Linq;
 using AutoMapper;
 using Shop.API.Domain.Models;
 using Shop.API.Resources;
@@ -10,7 +11,9 @@ namespace Shop.API.Mapping
         {
             CreateMap<Product, ProductResource>();
             CreateMap<Category, CategoryResource>();
-            CreateMap<User, UserResource>();
+            CreateMap<User, UserResource>()
+                .ForMember(x => x.Role, y => y.MapFrom(s => s.UserRoles.Select(z => z.Role.Name)));
+            
         }
     }
 }
